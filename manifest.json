@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "NoRevacha",
+  "description": "Automatically cancels your Dmei Revacha so you won't accidentally pay",
+  "browser_action": {
+    "default_icon": "icon3.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage",
+    "notifications"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.ims.tau.ac.il/Tal/Sys/*"],
+      "js" : ["jquery-3.3.1.js", "jquery-ui.js", "noRevacha.js" ]
+    }
+  ]
+
+}
